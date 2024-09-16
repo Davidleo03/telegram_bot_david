@@ -1,20 +1,12 @@
-import { config } from "dotenv";
 import { Telegraf } from "telegraf";
+import { message } from "telegraf/filters";
 import { CohereClient } from "cohere-ai";
 
-import { message } from "telegraf/filters";
 
-config();
-
-console.log(process.env.TOKEN_COHERE);
-console.log(typeof process.env.TOKEN_COHERE);
-
-const bot = new Telegraf(process.env.TOKEN_BOT);
+const bot = new Telegraf('7424067781:AAG-OT_ScEKogNYfMKZhc_clpEjrI1uaKDs');
 const cohere = new CohereClient({
-   token : process.env.TOKEN_COHERE
+   token : 'NK1BGtDT8NcL1aySeUHX444525tibXzJuf8frbBI'
 })
-
-
 
 bot.start(ctx => ctx.reply(`Hola ${ctx.message.chat.first_name} soy un asistente virtual. En que te puedo ayudar? `));
 
