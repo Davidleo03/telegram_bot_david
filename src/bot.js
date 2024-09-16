@@ -30,9 +30,8 @@ bot.on(message('text'), async (ctx) => {
          stopSequences: [],
          returnLikelihoods: "NONE"
        });
-      const { generations } = response;
-      const data = await generations[0].text;
-      ctx.reply(data);
+      const { generations } = await response;
+      ctx.reply(generations[0].text);
       
    } catch (error) {
       console.log(error);
