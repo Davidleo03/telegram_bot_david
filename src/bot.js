@@ -6,6 +6,8 @@ import { message } from "telegraf/filters";
 
 config();
 
+console.log(process.env.TOKEN_COHERE);
+console.log(typeof process.env.TOKEN_COHERE);
 
 const bot = new Telegraf(process.env.TOKEN_BOT);
 const cohere = new CohereClient({
