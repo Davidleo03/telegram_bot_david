@@ -41,7 +41,7 @@ bot.on(message('text'), async (ctx) => {
 })
 
 
-console.log('Bot Funcionando...')
+
 
 export default bot;
 
