@@ -17,7 +17,7 @@ bot.on(message('text'), async (ctx) => {
       const response = await cohere.generate({
          model: "c4ai-aya-23",
          prompt: msg, 
-         maxTokens: 500,
+         maxTokens: 1000,
          temperature: 0.5,
          k: 0,
          p: 1, 
